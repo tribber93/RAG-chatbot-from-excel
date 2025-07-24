@@ -1,13 +1,13 @@
-# 1. Use official Python base image
+# Use official Python base image
 FROM python:3.12-slim
 
-# 2. Set working directory inside the container
+# Set working directory inside the container
 WORKDIR /app
 
-# 3. Copy local code into the container
+# Copy local code into the container
 COPY . .
 
-# 4. Install system dependencies for Streamlit + LangChain
+# Install system dependencies for Streamlit + LangChain
 RUN apt-get update && apt-get install -y \
     build-essential \
     libglib2.0-0 \
@@ -16,15 +16,15 @@ RUN apt-get update && apt-get install -y \
     libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# 5. Install Python dependencies
+# Install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# 6. Set environment variables (optional if using .env)
+# Set environment variables (optional if using .env)
 ENV PYTHONUNBUFFERED=1
 
-# 7. Expose the port used by Streamlit
+# Expose the port used by Streamlit
 EXPOSE 8501
 
-# 8. Run Streamlit app
+# Run Streamlit app
 CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
