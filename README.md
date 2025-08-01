@@ -1,16 +1,15 @@
 # Gemini RAG Chatbot Nawatech
 
-- [Gemini RAG Chatbot Nawatech](#gemini-rag-chatbot-nawatech)
-  - [Features](#features)
-  - [Folder Structure](#folder-structure)
-  - [Installation](#installation)
-  - [Running the Chatbot](#running-the-chatbot)
-  - [Running with Docker](#running-with-docker)
-  - [How to Use](#how-to-use)
-  - [Configuration](#configuration)
-  - [Notes](#notes)
-
 This chatbot uses Retrieval-Augmented Generation (RAG) technology with Google's Gemini model and Qdrant vector store. The chatbot can answer questions based on FAQ data stored in an Excel file.
+
+- [Features](#features)
+- [Folder Structure](#folder-structure)
+- [Installation](#installation)
+- [Running the Chatbot](#running-the-chatbot)
+- [Running with Docker](#running-with-docker)
+- [How to Use](#how-to-use)
+- [Configuration](#configuration)
+- [Notes](#notes)
 
 ## Features
 
